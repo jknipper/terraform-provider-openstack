@@ -123,7 +123,7 @@ func resourceNetworkingSecGroupRuleV2Create(d *schema.ResourceData, meta interfa
 		PortRangeMax:   d.Get("port_range_max").(int),
 		RemoteGroupID:  d.Get("remote_group_id").(string),
 		RemoteIPPrefix: d.Get("remote_ip_prefix").(string),
-		ProjectID:      d.Get("tenant_id").(string),
+		TenantID:       d.Get("tenant_id").(string),
 	}
 
 	if v, ok := d.GetOk("direction"); ok {
