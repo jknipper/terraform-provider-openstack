@@ -126,6 +126,7 @@ type CreateOpts struct {
 	// TenantID is the UUID of the project who owns the Rule.
 	// Only administrative users can specify a project UUID other than their own.
 	ProjectID string `json:"project_id,omitempty"`
+	TenantID  string `json:"tenant_id,omitempty"`
 }
 
 // ToSecGroupRuleCreateMap builds a request body from CreateOpts.
